@@ -77,4 +77,149 @@ products.forEach(product => {
 
     product.style.opacity = "0";
 
+});//==================================================
+// SECTION 2 - START INTRO ANIMATION
+//==================================================
+
+window.addEventListener("load", () => {
+
+    // Show logo
+
+    introLogo.style.animation = "logoPop 1s forwards";
+
+    // Phone
+
+    setTimeout(() => {
+
+        phone.style.opacity = "1";
+
+        phone.style.animation = "flyIntoBag .8s forwards";
+
+    }, 800);
+
+    // Laptop
+
+    setTimeout(() => {
+
+        laptop.style.opacity = "1";
+
+        laptop.style.animation = "flyIntoBag .8s forwards";
+
+    }, 1400);
+
+    // Headphones
+
+    setTimeout(() => {
+
+        headphones.style.opacity = "1";
+
+        headphones.style.animation = "flyIntoBag .8s forwards";
+
+    }, 2000);
+
+    // Watch
+
+    setTimeout(() => {
+
+        watch.style.opacity = "1";
+
+        watch.style.animation = "flyIntoBag .8s forwards";
+
+    }, 2600);
+
+    // Logo bounce
+
+    setTimeout(() => {
+
+        introLogo.style.animation = "bounce .6s";
+
+    }, 3400);//==================================================
+// SECTION 3 - BRAND NAME & TAGLINE ANIMATION
+//==================================================
+
+// Reveal the letters one by one
+
+setTimeout(() => {
+
+    letters.forEach((letter, index) => {
+
+        setTimeout(() => {
+
+            letter.style.opacity = "1";
+
+            letter.style.animation = "revealLetter .5s forwards";
+
+        }, index * 250);
+
+    });
+
+}, 3800);
+
+
+// Show the tagline
+
+setTimeout(() => {
+
+    tagline.style.opacity = "1";
+
+    tagline.style.animation = "fadeIn 1s forwards";
+
+}, 5400);//==================================================
+// SECTION 4 - SHOW MAIN WEBSITE
+//==================================================
+
+// Hide intro and display website
+
+setTimeout(() => {
+
+    // Fade out intro
+
+    intro.style.transition = "opacity 1s ease";
+
+    intro.style.opacity = "0";
+
+}, 7000);
+
+
+// Remove intro from screen
+
+setTimeout(() => {
+
+    intro.style.display = "none";
+
+    website.style.display = "block";
+
+    website.style.animation = "fadeIn 1s forwards";
+
+}, 8000);
+
+
+// Smooth scroll for navigation links
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(
+
+            this.getAttribute("href")
+
+        );
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
 });
