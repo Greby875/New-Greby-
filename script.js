@@ -222,4 +222,82 @@ document.querySelectorAll("nav a").forEach(link => {
 
 });
 
+});//==================================================
+// SECTION 5 - WEBSITE INTERACTIONS
+//==================================================
+
+// Shop Now Button
+
+const shopBtn = document.getElementById("shop-btn");
+
+if (shopBtn) {
+
+    shopBtn.addEventListener("click", () => {
+
+        document.getElementById("products").scrollIntoView({
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+
+// Product Buttons
+
+document.querySelectorAll(".product-card button").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        button.innerHTML = '<i class="fas fa-check"></i> Added';
+
+        button.style.background = "#16a34a";
+
+        setTimeout(() => {
+
+            button.innerHTML = "Add to Cart";
+
+            button.style.background = "";
+
+        }, 2000);
+
+    });
+
 });
+
+
+// Newsletter Form
+
+const newsletterForm = document.querySelector("#newsletter form");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        alert("🎉 Thank you for subscribing to Greby!");
+
+        this.reset();
+
+    });
+
+}
+
+
+// Footer Year
+
+const copyright = document.querySelector(".copyright");
+
+if(copyright){
+
+    copyright.innerHTML =
+
+    `© ${new Date().getFullYear()} GREBY. All Rights Reserved.`;
+
+}
+
+
+// End of Greby Script
