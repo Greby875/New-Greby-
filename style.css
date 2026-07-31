@@ -84,7 +84,7 @@ text-align:center;
 
 #intro-logo{
 
-width:250px;
+width:350px;
 
 opacity:0;
 
@@ -216,9 +216,9 @@ gap:12px;
 
 .logo img{
 
-width:60px;
+width:70px;
 
-height:60px;
+height:70px;
 
 border-radius:50%;
 
@@ -348,7 +348,7 @@ border-radius:50px;
 
 background:var(--primary);
 
-color:white;
+color:black;
 
 font-size:18px;
 
